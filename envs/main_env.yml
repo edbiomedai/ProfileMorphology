@@ -1,0 +1,15 @@
+name: 
+channels:
+- https://conda.anaconda.org/conda-forge
+dependencies:
+- dask
+- openslide
+- openslide-python
+- pip
+- python
+- scikit-image
+- tensorflow
+- zarr
+- pip:
+  - git+https://github.com/SCEMA-WSI/scematk.git
+
