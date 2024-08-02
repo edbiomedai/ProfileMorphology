@@ -13,6 +13,8 @@ process SegmentTissue {
     
     output:
         val base_name, emit: base_name
+        path "${zarr_path}", emit: image_zarr
+        path "${json_path}", emit: image_json
         path "${base_name}_tissuemask.zarr", emit: tissue_mask_zarr
         path "${base_name}_tissuemask.json", emit: tissue_mask_json
         path "${base_name}_tissuemask.png", emit: tissue_mask_png
