@@ -2,9 +2,13 @@ name:
 channels:
 - https://conda.anaconda.org/conda-forge
 dependencies:
+- csbdeep
 - dask
+- dask-image
+- dask-jobqueue
 - openslide
 - openslide-python
+- pillow
 - pip
 - python
 - scikit-image
@@ -12,4 +16,5 @@ dependencies:
 - zarr
 - pip:
   - git+https://github.com/SCEMA-WSI/scematk.git
+  - stardist
 
