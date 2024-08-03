@@ -15,7 +15,7 @@ workflow ProfileMorphology {
     tiff_out = ConvertToTiff.out
 
     SegmentTissue(tiff_out.base_name, tiff_out.zarr_path, tiff_out.json_path)
-    tis_mask_out = ConvertToTiff.out
+    tis_mask_out = SegmentTissue.out
 
     SegmentNuclei(tis_mask_out.base_name, tis_mask_out.image_zarr, tis_mask_out.image_json, tis_mask_out.tissue_mask_zarr, tis_mask_out.tissue_mask_json)
     nuc_mask_out = SegmentNuclei.out

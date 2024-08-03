@@ -2,8 +2,8 @@ process SegmentNuclei {
     tag "SegmentNuclei"
     conda "${projectDir}/envs/main_env.yml"
     memory "16 GB"
-    time "1 h"
-    cpus 8
+    time "12 h"
+    cpus 16
 
     input:
         val base_name
