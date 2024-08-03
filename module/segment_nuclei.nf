@@ -14,6 +14,12 @@ process SegmentNuclei {
     
     output:
         val base_name, emit: base_name
+        path image_zarr, emit: image_zarr
+        path image_json, emit: image_json
+        path tissue_mask_zarr, emit: tissue_mask_zarr
+        path tissue_mask_json, emit: tissue_mask_json
+        path "${base_name}_nucleimask.zarr", emit: nuclei_mask_zarr
+        path "${base_name}_nucleimask.json", emit: nuclei_mask_json
     
     script:
         """
