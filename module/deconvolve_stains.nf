@@ -12,9 +12,7 @@ process DeconvolveStains {
         path json_path
     
     output:
-        val base_name, emit: base_name
-        path "${base_name}_deconv.zarr", emit: deconv_zarr
-        path "${base_name}_deconv.json", emit: deconv_json
+        tuple val(base_name), path("${base_name}_deconv.zarr"), path("${base_name}_deconv.json"), emit: deconv_img
         path "${base_name}_deconv.png", emit: deconv_png
     
     script:
